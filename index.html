@@ -1,19 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>HTML Generator</title>
+    <script>window.$ = window.jQuery = require('jquery');</script>
+    <link rel="stylesheet" id="twentytwelve-style-css" href="style.css"/>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <h1>HTML Genarator</h1>
+    <p>HTML生成ソフトウェアです。下記のテキストエリアに商品管理番号を入力してgenerate!ボタンをクリックしてください</p>
+    <textarea style="width:100%;" id="area">
+77-1111
+89-9999
+    </textarea>
+    <div id="button-area">
+      <button id="generate" class="myButton" type="button">genarate!</button>
+    </div>
+    <pre id="out" style="border:1px black solid;width:100%"></pre>
+    
+    <pre style="display:none">
     <!-- All of the Node.js APIs are available in this renderer process. -->
     We are using Node.js <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
-
+    </pre>
     <script>
       // You can also require other files to run in this process
       require('./renderer.js')
+      require('./function.js')
+    </script>
+
+    <script type="text/template" id="template">
+    <div>
+      <p>{{code}}</p>
+      <p>{{code}}</p>
+    </div>
     </script>
   </body>
 </html>

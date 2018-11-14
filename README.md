@@ -1,4 +1,6 @@
-# electron-quick-start
+# electron-quick-startからの最初のreactアプリ
+
+htmlを生成する簡単なアプリを作成しました。
 
 **Clone and run for a quick way to see Electron in action.**
 
